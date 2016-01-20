@@ -4,7 +4,10 @@
   "description": "Define sources for object properties to support mapping between two object types (ie: Model/Record for DataMapper)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/coffee -l README.md"
+    "test": "./bin/shake npm_test",
+    "preversion": "./bin/shake npm_preversion",
+    "version": "./bin/shake npm_version",
+    "postversion": "./bin/shake npm_postversion"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,9 @@
   },
   "homepage": "https://github.com/bocodigitalmedia/boco-object-source-map#readme",
   "devDependencies": {
-    "coffee-script": "^1.10.0"
+    "boco-markdown-driven": "^0.3.6",
+    "coffee-script": "^1.10.0",
+    "jasmine": "^2.4.1",
+    "lodash": "^4.0.0"
   }
 }

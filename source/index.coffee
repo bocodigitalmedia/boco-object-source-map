@@ -60,8 +60,11 @@ configure = ->
     definePropertySource: (property, resolvers) ->
       @propertySources[property] = @createPropertySource(property, resolvers)
 
-    definePropertySources: (propertySources) ->
-      @definePropertySource property, propertySource for own property, propertySource of propertySources
+    definePropertySources: (propertyResolvers) ->
+      @definePropertySource property, resolvers for own property, resolvers of propertyResolvers
+
+    definePropertiesSource: (properties, resolvers) ->
+      @definePropertySource property, resolvers for property in properties
 
     getPropertySource: (property) ->
       return @propertySources[property] if @propertySources.hasOwnProperty(property)
